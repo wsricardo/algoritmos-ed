@@ -59,6 +59,37 @@ class LinkedList:
         no.next = pointer.next
         pointer.next = no
         self._size = self._size + 1 
+        
+    def remove(self, index):
+        
+        pointer = self.head
+        count = 0
+        
+        if self.head == None:
+            raise BaseException("Empty List")
+            
+        else:
+            
+            if index > self._size:
+                raise BaseException('Index out range!')
+            
+            while count <= index - 1 :
+                if count == index - 1:
+                    count = count + 1
+                    poster = pointer.next
+                    del(pointer.next)
+                    pointer.next = poster.next
+                else:
+                    pointer = pointer.next
+                    count = count + 1
+                
+            
+            pointer = poster
+            
+    def busca(self, elem):
+        pos = 0
+        
+        return pos
             
 
 if __name__=='__main__':
@@ -73,7 +104,8 @@ if __name__=='__main__':
     print('> ',l) 
     print('size l', l.size)
     print('len function ', len(l))
-    
+    l.remove(2)
+    print('> ',l)
     
     # Endereço de a
     #a = 2
