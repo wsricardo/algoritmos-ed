@@ -58,7 +58,8 @@ class LinkedList:
         
         no = Node(elem)
         no.next = pointer.next
-        pointer.next = no    
+        pointer.next = no
+        self._size = self._size + 1 
             
 
 if __name__=='__main__':
