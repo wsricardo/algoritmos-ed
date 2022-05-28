@@ -101,10 +101,29 @@ class LinkedList:
             pointer = poster
             
     def search(self, elem):
+        """
+            Search by element 'elem'.
+            If found return position, pos variable;
+            if not found return -1.
+        """
         pos = 0
+        pointer = self.head 
         
-        return pos
+        while pointer.next != None:
+            if pointer.data == elem:
+                return pos
+            else:
+                pointer = pointer.next
+                pos = pos + 1
+        
+        return -1
             
+def helpMan():
+    print('\n\n')
+    print("*HELP*")
+    print(18*"-")
+    print("\n\n")
+    return help(LinkedList)
 
 if __name__=='__main__':
     l = LinkedList()
@@ -120,8 +139,10 @@ if __name__=='__main__':
     print('len function ', len(l))
     l.remove(2)
     print('> ',l)
-    
+    print('search element 21 ', l.search(21) )
     # Endereço de a
     #a = 2
     #print(id(a))
+    #helpMan()
+    
     
