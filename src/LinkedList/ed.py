@@ -5,7 +5,6 @@ Created on Tue May 24 16:06:56 2022
 @author: Wandeson Ricardo
 Blog: https://wsricardo.blogspot.com
 """
-from copy import copy
 
 class Node:
     def __init__(self, data = 0, next = None ):
@@ -21,6 +20,7 @@ class LinkedList:
     
     def __init__(self, head=None):
         self.head = head
+        self._size = 0
         
     def __repr__(self):
         return "%s"%(self.head)
@@ -41,8 +41,17 @@ class LinkedList:
         no = Node(elem)
         pointer.next = no
         nova.next = pointer
-        print("pointer %s"%(pointer))
         return nova
+    
+    @property
+    def size(self):
+        pointer = self.head
+        size = 0
+        while pointer != None:
+            pointer = pointer.next
+            size = size + 1  
+        self._size = size
+        return self._size
     
     def insert_start(self, elem):
         """
@@ -65,6 +74,16 @@ class LinkedList:
         nova.head = novo_no
         return nova
     
+    def insert_in_index(self, index, elem):
+        """
+            Insert element (elem) in position "index".
+            Count element start in 0 position for list.
+        """
+        HEAD = self.head
+        nova = None
+        print("HEAD ", HEAD)
+        return nova
+    
 if __name__ == "__main__":
     no1 = Node(12)
     no2 = Node(1332)
@@ -77,4 +96,7 @@ if __name__ == "__main__":
     print("Linked List \n {}".format(l))
     print("\nLinkedList inserted new element {}".format( l.insert_end(152245) ) )
     l.insert_start(13.45)
+    print("size ",l.size)
     print("Lnked List inserted in start %s"%(l))
+    l.insert_in_index(3, 15)
+    print("l insert index ", l)
