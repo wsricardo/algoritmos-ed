@@ -26,7 +26,6 @@ class LinkedList:
            
     def insert(self, data):
         pointer = self.head
-        #nova = pointer 
         
         #print('head pointer', pointer)
         
