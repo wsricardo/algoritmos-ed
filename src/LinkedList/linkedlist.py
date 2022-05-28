@@ -10,6 +10,20 @@ class Node:
         return '%s :-> %s'%(self.data, self.next)
 
 class LinkedList:
+    """
+        Linked list class.
+        Atributes
+            _size - list size (private variable)
+            head - pointer start for head of list
+        Properties
+            size
+        Functions
+            insert
+            insert_in_index
+            remove
+            search
+
+    """
     def __init__(self, head=None):
         self.head = head
         self._size = 0
@@ -86,7 +100,7 @@ class LinkedList:
             
             pointer = poster
             
-    def busca(self, elem):
+    def search(self, elem):
         pos = 0
         
         return pos
