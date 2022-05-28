@@ -68,6 +68,8 @@ if __name__=='__main__':
     l.insert(7)
     l.insert(13)
     l.insert_in_index(2, 21)
+    print('> ', l)
+    l.insert_in_index(index=1, elem=35)
     
     print('> ',l) 
     print('size l', l.size)
