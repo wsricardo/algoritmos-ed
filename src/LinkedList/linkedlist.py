@@ -28,7 +28,7 @@ class LinkedList:
         pointer = self.head
         nova = pointer 
         aux = None
-        print('head pointer', pointer)
+        #print('head pointer', pointer)
         
         if self.head==None:
             self.head = Node(data)
@@ -41,8 +41,8 @@ class LinkedList:
         self._size = self._size + 1
       
         nova = pointer 
-        print('size list', self._size)
-        print(pointer)
+        #print('size list', self._size)
+        #print(pointer)
         
     def insert_in_index(self, index, elem):
         pointer = self.head
