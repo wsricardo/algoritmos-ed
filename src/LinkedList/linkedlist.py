@@ -26,8 +26,8 @@ class LinkedList:
            
     def insert(self, data):
         pointer = self.head
-        nova = pointer 
-        aux = None
+        #nova = pointer 
+        
         #print('head pointer', pointer)
         
         if self.head==None:
@@ -40,7 +40,7 @@ class LinkedList:
             
         self._size = self._size + 1
       
-        nova = pointer 
+        #nova = pointer 
         #print('size list', self._size)
         #print(pointer)
         
