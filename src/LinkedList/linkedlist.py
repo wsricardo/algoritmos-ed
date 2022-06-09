@@ -41,8 +41,6 @@ class LinkedList:
     def insert(self, data):
         pointer = self.head
         
-        #print('head pointer', pointer)
-        
         if self.head==None:
             self.head = Node(data)
         else:
@@ -53,9 +51,6 @@ class LinkedList:
             
         self._size = self._size + 1
       
-        #nova = pointer 
-        #print('size list', self._size)
-        #print(pointer)
         
     def insert_in_index(self, index, elem):
         pointer = self.head
@@ -142,9 +137,6 @@ if __name__=='__main__':
     print('> ',l)
     print('New lenght of list ', len(l))
     print('search element 21 pos ', l.search(21) )
-    # Endereço de a
-    #a = 2
-    #print(id(a))
     #helpMan()
     
     
