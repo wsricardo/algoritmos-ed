@@ -93,6 +93,7 @@ class LinkedList:
                     poster = pointer.next
                     del(pointer.next)
                     pointer.next = poster.next
+                    self._size -= 1
                 else:
                     pointer = pointer.next
                     count = count + 1
@@ -139,7 +140,8 @@ if __name__=='__main__':
     print('len function ', len(l))
     l.remove(2)
     print('> ',l)
-    print('search element 21 ', l.search(21) )
+    print('New lenght of list ', len(l))
+    print('search element 21 pos ', l.search(21) )
     # Endereço de a
     #a = 2
     #print(id(a))
