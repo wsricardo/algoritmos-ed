@@ -24,6 +24,9 @@ class Stack:
         return self._size
     
     def __len__(self):
+        return self._size
+    
+    def __len__(self):
         """Retorna tamanho da pilha"""
         return self._size
     
@@ -60,12 +63,13 @@ class Stack:
     
     
 if __name__ == "__main__":
-    print("main")
+    
     l = Stack()
     l.push(12)
     l.push(3)
     l.push(87)
     print(l)
+    print("Size stack: {}\n".format(  len(l) ) )
     l.pop()
     print(l)
     l.peek()
