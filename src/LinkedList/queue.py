@@ -27,6 +27,8 @@ class Queue:
     
     @property 
     def table(self):
+        if self._size == 0:
+            return "Empty queue"
         return self._table
     
     
