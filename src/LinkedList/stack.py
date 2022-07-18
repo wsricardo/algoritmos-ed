@@ -40,7 +40,7 @@ class Stack:
         while pointer != None:
             s = s + tab*' '  + str(pointer.data) + '\n'
             pointer = pointer.ant
-            
+         
         return s
             
     
