@@ -62,7 +62,10 @@ class Queue:
         self._size = self._size + 1
     
     def remove(self):
-        return 0
+        if self._size == 0:
+            raise BaseException(f"Empty Queue. Class {self.__class__} Size: {self._size}")
+        else:
+            self.start = self.start.ref
     
 
 if __name__=="__main__":
@@ -71,6 +74,11 @@ if __name__=="__main__":
     l.insert(1)
     l.insert(35)
     print(l)
+    l.remove()
+    print(l)
+    q = Queue()
+    q.remove()
+    
     pass
     
     
